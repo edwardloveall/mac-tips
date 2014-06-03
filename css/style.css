@@ -1,0 +1,8 @@
+div.slides > section {
+  opacity: 0;
+  -webkit-transision: opacity .4s ease-in-out;
+}
+
+div.slides > section.present {
+  opacity: 1;
+}
