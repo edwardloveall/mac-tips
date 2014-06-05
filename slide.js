@@ -8,7 +8,8 @@ var init = function() {
 }
 
 var prep_slides = function() {
-  var slides = $('div.slides > section');
+  var slides = $('div.slides > section'),
+      partials = slides.children('.partial')
   slides.not(':first-child').addClass('future');
   slides.first().addClass('present');
 }
