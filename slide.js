@@ -9,9 +9,10 @@ var init = function() {
 
 var prep_slides = function() {
   var slides = $('div.slides > section'),
-      partials = slides.children('.partial')
+      partials = $('.partial', slides);
   slides.not(':first-child').addClass('future');
   slides.first().addClass('present');
+  partials.addClass('future')
 }
 
 var prep_keybindings = function() {
@@ -31,10 +32,16 @@ var prep_keybindings = function() {
 
 var slide_next = function() {
   var present_slide = $('div.slides > section.present'),
-      future_slide = present_slide.next('section');
+      future_slide = present_slide.next('section'),
+      future_partial = present_slide.find('.partial.future').first(),
+      present_partial = present_slide.find('.partial.present').first();
 
-  if (future_slide.length > 0) {
+  if (future_partial.length > 0) {
+    present_partial.removeClass('present').addClass('past');
+    future_partial.removeClass('future').addClass('present');
+  } else if (future_slide.length > 0) {
     present_slide.removeClass('present').addClass('past');
+    future_slide.find('.partial').addClass('future').removeClass('present past')
     future_slide.removeClass('future').addClass('present');
   }
 }
@@ -45,6 +52,7 @@ var slide_back = function() {
 
   if (past_slide.length > 0) {
     present_slide.removeClass('present').addClass('future');
+    past_slide.find('.partial').addClass('future').removeClass('present past')
     past_slide.removeClass('past').addClass('present');
   }
 }

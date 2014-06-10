@@ -21,7 +21,6 @@ div.slides > section {
   position: absolute;
   right: 0;
   text-align: center;
-  transition: all 1s ease-out;
   top: -100px;
   vertical-align: middle;
   width: 100%;
@@ -32,8 +31,13 @@ div.slides > section.present {
   top: 0;
 }
 
-div.slides > section.past {
-  top: 100px;
+div.slides > section .partial {
+  opacity: 0;
+}
+
+div.slides > section .partial.present,
+div.slides > section .partial.past {
+  opacity: 1;
 }
 
 ol, ul {
