@@ -5,6 +5,9 @@ $(document).ready(function() {
 var init = function() {
   prep_slides();
   prep_keybindings();
+
+  skip_slide = parseInt(window.location.hash.split('#')[1]) - 1
+  go_to_slide(skip_slide);
 }
 
 var prep_slides = function() {
@@ -28,6 +31,19 @@ var prep_keybindings = function() {
         break;
     }
   });
+}
+
+var go_to_slide = function(number) {
+  if (number != undefined) {
+    var slides = $('div.slides > section')
+    slides.each(function(i, ele) {
+      if (i < number) {
+        $(ele).addClass('past').removeClass('future present');
+      } else if (i == number) {
+        $(ele).addClass('present').removeClass('future');
+      }
+    })
+  }
 }
 
 var slide_next = function() {
