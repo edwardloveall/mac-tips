@@ -10,28 +10,35 @@ html, body {
 div.slides {
   color: #3c3b39;
   font: 40px "adelle", serif;
+  /*opacity: 0.2;*/
+  width: 960px;
 }
 
 div.slides > section {
   bottom: 0px;
-  height: 500px;
+  height: 800px;
   left: 0;
   margin: auto;
   opacity: 0;
   position: absolute;
   right: 0;
+  top: 0;
   text-align: center;
-  top: -100px;
   vertical-align: middle;
-  width: 100%;
+  width: 500px;
+}
+
+div.slides > section h1 {
+  margin-bottom: 1em;
 }
 
 div.slides > section.present {
   opacity: 1;
-  top: 0;
 }
 
 div.slides > section .partial {
+  margin-bottom: 1em;
+  text-align: left;
   opacity: 0;
 }
 
@@ -45,4 +52,14 @@ ol, ul {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   -webkit-padding-start: 0;
+}
+
+span.key {
+  background-color: #fafafa;
+  border: 1px solid #d0d0d0;
+  box-shadow: 0 5px 0 #d0d0d0;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  width: 3em;
 }
