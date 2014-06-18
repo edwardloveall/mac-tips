@@ -10,7 +10,6 @@ html, body {
 div.slides {
   color: #3c3b39;
   font: 40px "adelle", serif;
-  /*opacity: 0.2;*/
   width: 960px;
 }
 
@@ -25,7 +24,8 @@ div.slides > section {
   top: 0;
   text-align: center;
   vertical-align: middle;
-  width: 500px;
+  width: 700px;
+  z-index: 0;
 }
 
 div.slides > section h1 {
@@ -34,17 +34,26 @@ div.slides > section h1 {
 
 div.slides > section.present {
   opacity: 1;
+  z-index: 1;
+}
+
+div.slides > section .partial,
+div.slides > section p {
+  margin-bottom: 1em;
+  text-align: left;
 }
 
 div.slides > section .partial {
-  margin-bottom: 1em;
-  text-align: left;
   opacity: 0;
 }
 
 div.slides > section .partial.present,
 div.slides > section .partial.past {
   opacity: 1;
+}
+
+img {
+  max-width: 100%;
 }
 
 ol, ul {
@@ -54,12 +63,16 @@ ol, ul {
   -webkit-padding-start: 0;
 }
 
-span.key {
+em {
   background-color: #fafafa;
   border: 1px solid #d0d0d0;
   box-shadow: 0 5px 0 #d0d0d0;
   border-radius: 5px;
   display: inline-block;
+  font-style: normal;
+  margin-right: .2em;
+  padding: 0 .5em;
   text-align: center;
-  width: 3em;
+  min-width: 2em;
+  -webkit-box-sizing: border-box;
 }
