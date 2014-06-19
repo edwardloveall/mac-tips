@@ -76,3 +76,10 @@ em {
   min-width: 2em;
   -webkit-box-sizing: border-box;
 }
+
+code {
+  background-color: #fafafa;
+  border: 1px solid #d0d0d0;
+  border-radius: 5px;
+  padding: 0 .1em;
+}
