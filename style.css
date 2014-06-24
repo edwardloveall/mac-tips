@@ -29,7 +29,7 @@ div.slides > section {
 }
 
 div.slides > section h1 {
-  margin-bottom: 1em;
+  margin: 1em 0;
 }
 
 div.slides > section.present {
@@ -82,4 +82,16 @@ code {
   border: 1px solid #d0d0d0;
   border-radius: 5px;
   padding: 0 .1em;
+}
+
+p.hint {
+  -webkit-animation: fade-in 6s ease;
+  opacity: 0.6;
+  text-align: center !important;
+}
+
+@-webkit-keyframes fade-in {
+  0% { opacity: 0; }
+  80% { opacity: 0; }
+  100% { opacity: 0.6; }
 }
