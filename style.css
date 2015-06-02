@@ -24,7 +24,7 @@ div.slides > section {
   top: 0;
   text-align: center;
   vertical-align: middle;
-  width: 700px;
+  width: 766px;
   z-index: 0;
 }
 
@@ -65,7 +65,7 @@ a.download {
 blockquote {
   border-left: 5px solid hsl(40, 2%, 82%);
   font-size: 0.8em;
-  padding-left: 2em;
+  padding-left: 1em;
 }
 
 cite {
@@ -113,6 +113,12 @@ p.hint {
   -webkit-animation: fade-in 6s ease;
   opacity: 0.6;
   text-align: center !important;
+}
+
+.window-shadow {
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
 @-webkit-keyframes fade-in {
