@@ -28,7 +28,7 @@ div.slides > section {
   z-index: 0;
 }
 
-div.slides > section h1 {
+div.slides > section h2 {
   margin: 1em 0;
 }
 
@@ -50,6 +50,31 @@ div.slides > section .partial {
 div.slides > section .partial.present,
 div.slides > section .partial.past {
   opacity: 1;
+}
+
+a {
+  color: #3c3b39;
+  text-decoration: none;
+}
+
+a.download {
+  display: block;
+  font-size: 0.5em;
+}
+
+blockquote {
+  border-left: 5px solid hsl(40, 2%, 82%);
+  font-size: 0.8em;
+  padding-left: 2em;
+}
+
+cite {
+  color: hsl(40, 2%, 42%);
+  display: block;
+  font-size: 0.5em;
+  font-style: italic;
+  line-height: 1.5em;
+  text-align: right;
 }
 
 img {
