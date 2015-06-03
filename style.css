@@ -126,3 +126,7 @@ p.hint {
   80% { opacity: 0; }
   100% { opacity: 0.6; }
 }
+
+section.keywords  code {
+  margin-right: 1ex;
+}
