@@ -130,3 +130,13 @@ p.hint {
 section.keywords  code {
   margin-right: 1ex;
 }
+
+aside.info {
+  font-size: 0.5em;
+  margin-top: 1em;
+}
+
+aside.info a {
+  display: block;
+  margin-bottom: 1em;
+}
