@@ -140,3 +140,7 @@ aside.info a {
   display: block;
   margin-bottom: 1em;
 }
+
+div.launcher {
+  display: inline-block;
+}
